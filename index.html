@@ -1,0 +1,374 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'>
+<title>Dated-Dubai价差中期预测模型报告</title>
+<style>
+body{font-family:"Microsoft YaHei",Arial,sans-serif;margin:28px;line-height:1.55;color:#222}
+h1{font-size:28px;margin:0 0 18px} h2{font-size:21px;margin-top:28px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0 18px}
+.kpi{border:1px solid #ddd;padding:10px;border-radius:6px}.kpi b{display:block;font-size:18px}
+.data-table{border-collapse:collapse;font-size:13px;width:100%;margin:8px 0 18px}
+.data-table th,.data-table td{border-bottom:1px solid #ddd;padding:6px 8px;text-align:right;vertical-align:top}
+.data-table th:first-child,.data-table td:first-child{text-align:left}
+img{max-width:100%;border:1px solid #ddd}.note{color:#555}
+</style></head><body>
+<h1>Dated-Dubai价差中期预测模型报告</h1>
+<h2>1. 核心结论</h2>
+<div class='grid'><div class='kpi'>数据日期<b>2026-06-12</b></div><div class='kpi'>Dated Brent<b>88.230</b></div><div class='kpi'>Dubai<b>83.180</b></div><div class='kpi'>Dated-Dubai价差<b>5.050</b></div></div>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>预测月份</th>
+      <th>预测对象</th>
+      <th>预测值</th>
+      <th>较当前变化</th>
+      <th>预测方向</th>
+      <th>模型</th>
+      <th>变量集</th>
+      <th>方向回测准确率</th>
+      <th>是否跑赢随机游走</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-07</td>
+      <td>M+1</td>
+      <td>1.5825</td>
+      <td>-3.4675</td>
+      <td>narrow</td>
+      <td>RandomForest</td>
+      <td>core</td>
+      <td>62.31%</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2026-08</td>
+      <td>M+2</td>
+      <td>2.2598</td>
+      <td>-2.7902</td>
+      <td>narrow</td>
+      <td>RandomForest</td>
+      <td>enhanced</td>
+      <td>62.72%</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2026-09</td>
+      <td>M+3</td>
+      <td>-0.2689</td>
+      <td>-5.3189</td>
+      <td>narrow</td>
+      <td>RandomForest</td>
+      <td>enhanced</td>
+      <td>75.00%</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+<p>方向准确率为历史滚动回测结果。</p>
+<p>最新Dated-Dubai价差为 5.050 USD/bbl；未来预测方向为：M+1 2026-07 narrow、M+2 2026-08 narrow、M+3 2026-09 narrow。</p>
+<p>当前三个预测月份中，M+1 使用 RandomForest + core，M+2 使用 RandomForest + enhanced，M+3 使用 RandomForest + enhanced。</p>
+<h2>2. 价差走势与中期预测</h2>
+<img src='bd_m1_m3_monthly_forecast_chart.png' alt='M1-M3月均预测图'>
+<p class='note'>实线为最近历史日度Dated-Dubai价差；水平虚线分别表示M+1/M+2/M+3完整自然月平均Dated-Dubai价差预测。向上表示价差扩大，Dated Brent相对Dubai走强；向下表示价差收窄，Dubai相对Dated Brent走强。</p>
+<h2>3. 回测表现摘要</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>预测月份</th>
+      <th>预测对象</th>
+      <th>模型</th>
+      <th>使用特征集</th>
+      <th>MAE</th>
+      <th>RMSE</th>
+      <th>方向回测准确率</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-07</td>
+      <td>M+1</td>
+      <td>RandomForest</td>
+      <td>core</td>
+      <td>1.4604</td>
+      <td>1.9770</td>
+      <td>62.31%</td>
+    </tr>
+    <tr>
+      <td>2026-08</td>
+      <td>M+2</td>
+      <td>RandomForest</td>
+      <td>enhanced</td>
+      <td>1.7050</td>
+      <td>2.0456</td>
+      <td>62.72%</td>
+    </tr>
+    <tr>
+      <td>2026-09</td>
+      <td>M+3</td>
+      <td>RandomForest</td>
+      <td>enhanced</td>
+      <td>1.2183</td>
+      <td>1.7550</td>
+      <td>75.00%</td>
+    </tr>
+  </tbody>
+</table>
+<p class='note'>剔除2026年3月至4月极端行情样本。</p>
+<h2>4. 主要驱动因素</h2>
+<table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>预测月份</th>
+      <th>排名</th>
+      <th>因素</th>
+      <th>所属模块</th>
+      <th>重要性</th>
+      <th>经济解释</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>1</td>
+      <td>Dated篮子平均升贴水</td>
+      <td>Dated CTD</td>
+      <td>0.291981</td>
+      <td>反映BFOET+WTI Midland篮子整体相对Dated的升贴水</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>2</td>
+      <td>伊朗油相对Dubai贵贱</td>
+      <td>制裁替代油</td>
+      <td>0.202878</td>
+      <td>反映伊朗油相对Dubai的贵贱变化</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>3</td>
+      <td>制裁替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.190504</td>
+      <td>反映制裁替代油整体便宜度压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>4</td>
+      <td>俄罗斯替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.096833</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>5</td>
+      <td>Dubai近端曲线</td>
+      <td>Dubai结构</td>
+      <td>0.048056</td>
+      <td>Dubai近端结构越强，通常对Dubai相对Brent有支撑</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>6</td>
+      <td>Dated篮子最便宜组分差</td>
+      <td>Dated CTD</td>
+      <td>0.046413</td>
+      <td>反映BFOET+WTI Midland篮子中最便宜组分对Dated的压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>7</td>
+      <td>制裁油流向亚洲</td>
+      <td>制裁替代油</td>
+      <td>0.035819</td>
+      <td>反映制裁油流向亚洲的供应压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>8</td>
+      <td>核心海湾出口量</td>
+      <td>OPEC供应</td>
+      <td>0.027782</td>
+      <td>反映核心海湾出口量变化对中东供应的影响</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>9</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.026643</td>
+      <td>反映中东供应缓冲和潜在增产压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>10</td>
+      <td>Cold Lake相对优势信号</td>
+      <td>非制裁替代油</td>
+      <td>0.013449</td>
+      <td>反映Cold Lake相对其他替代油的竞争力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>1</td>
+      <td>Murban/Upper Zakum OSP价差</td>
+      <td>Dubai OSP</td>
+      <td>0.625648</td>
+      <td>反映UAE轻质与中重质官方售价相对强弱</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>2</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.083920</td>
+      <td>反映中东供应缓冲和潜在增产压力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>3</td>
+      <td>核心海湾产量</td>
+      <td>OPEC供应</td>
+      <td>0.076401</td>
+      <td>反映核心海湾产量变化对中东供应的影响</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>4</td>
+      <td>WAF至UK Suezmax运费</td>
+      <td>运费</td>
+      <td>0.071410</td>
+      <td>反映西非原油流向欧洲的运费成本和套利压力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>5</td>
+      <td>俄罗斯替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.032499</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的压力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>6</td>
+      <td>USGC汽油价格</td>
+      <td>产品价差</td>
+      <td>0.019272</td>
+      <td>反映美国海湾汽油市场强弱及产品端支撑</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>7</td>
+      <td>Dubai M1/M2结构</td>
+      <td>Dubai结构</td>
+      <td>0.015335</td>
+      <td>反映Dubai近月相对次月强弱</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>8</td>
+      <td>Dated篮子平均升贴水</td>
+      <td>Dated CTD</td>
+      <td>0.014348</td>
+      <td>反映BFOET+WTI Midland篮子整体相对Dated的升贴水</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>9</td>
+      <td>新加坡航煤/高硫燃料油价差</td>
+      <td>产品价差</td>
+      <td>0.011708</td>
+      <td>反映轻质产品相对重质产品收益强弱</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>10</td>
+      <td>制裁替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.008095</td>
+      <td>反映制裁替代油整体便宜度压力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>1</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.486994</td>
+      <td>反映中东供应缓冲和潜在增产压力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>2</td>
+      <td>核心海湾产量</td>
+      <td>OPEC供应</td>
+      <td>0.222293</td>
+      <td>反映核心海湾产量变化对中东供应的影响</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>3</td>
+      <td>俄罗斯替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.138198</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的压力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>4</td>
+      <td>制裁替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.071205</td>
+      <td>反映制裁替代油整体便宜度压力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>5</td>
+      <td>伊朗油相对Dubai贵贱</td>
+      <td>制裁替代油</td>
+      <td>0.028674</td>
+      <td>反映伊朗油相对Dubai的贵贱变化</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>6</td>
+      <td>Murban/Upper Zakum OSP价差</td>
+      <td>Dubai OSP</td>
+      <td>0.017993</td>
+      <td>反映UAE轻质与中重质官方售价相对强弱</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>7</td>
+      <td>新加坡航煤/高硫燃料油价差</td>
+      <td>产品价差</td>
+      <td>0.016532</td>
+      <td>反映轻质产品相对重质产品收益强弱</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>8</td>
+      <td>俄罗斯油相对Dubai便宜度</td>
+      <td>制裁替代油</td>
+      <td>0.006817</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的折价吸引力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>9</td>
+      <td>USGC汽油价格</td>
+      <td>产品价差</td>
+      <td>0.005316</td>
+      <td>反映美国海湾汽油市场强弱及产品端支撑</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>10</td>
+      <td>Brent-Dubai相对曲线</td>
+      <td>Brent/Dubai结构</td>
+      <td>0.003088</td>
+      <td>反映Brent曲线相对Dubai曲线的强弱</td>
+    </tr>
+  </tbody>
+</table>
+<p class='note'>Top Drivers 仅表示模型在历史样本中的主要依赖变量，不代表因果关系。</p>
+<h2>5. 未来完善方向</h2>
+<p>未来可补充Kpler实货流向、特殊事件哑变量、交易员观点集成、行业新闻API、研报文本解析等模块。</p>
+</body></html>
