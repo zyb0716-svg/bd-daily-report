@@ -12,7 +12,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
 </style></head><body>
 <h1>Dated-Dubai价差中期预测模型报告</h1>
 <h2>1. 核心结论</h2>
-<div class='grid'><div class='kpi'>数据日期<b>2026-06-12</b></div><div class='kpi'>Dated Brent<b>88.230</b></div><div class='kpi'>Dubai<b>83.180</b></div><div class='kpi'>Dated-Dubai价差<b>5.050</b></div></div>
+<div class='grid'><div class='kpi'>数据日期<b>2026-06-15</b></div><div class='kpi'>Dated Brent<b>84.445</b></div><div class='kpi'>Dubai<b>78.900</b></div><div class='kpi'>Dated-Dubai价差<b>5.545</b></div></div>
 <table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
@@ -31,8 +31,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-07</td>
       <td>M+1</td>
-      <td>0.2750</td>
-      <td>-4.7750</td>
+      <td>-9.6793</td>
+      <td>-15.2243</td>
       <td>narrow</td>
       <td>RandomForest</td>
       <td>core</td>
@@ -42,8 +42,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-08</td>
       <td>M+2</td>
-      <td>1.4740</td>
-      <td>-3.5760</td>
+      <td>-7.7320</td>
+      <td>-13.2770</td>
       <td>narrow</td>
       <td>RandomForest</td>
       <td>enhanced</td>
@@ -54,7 +54,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>2026-09</td>
       <td>M+3</td>
       <td>-0.2689</td>
-      <td>-5.3189</td>
+      <td>-5.8139</td>
       <td>narrow</td>
       <td>RandomForest</td>
       <td>enhanced</td>
@@ -64,7 +64,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
   </tbody>
 </table>
 <p>方向准确率为历史滚动回测结果。</p>
-<p>最新Dated-Dubai价差为 5.050 USD/bbl；未来预测方向为：M+1 2026-07 narrow、M+2 2026-08 narrow、M+3 2026-09 narrow。</p>
+<p>最新Dated-Dubai价差为 5.545 USD/bbl；未来预测方向为：M+1 2026-07 narrow、M+2 2026-08 narrow、M+3 2026-09 narrow。</p>
 <p>当前三个预测月份中，M+1 使用 RandomForest + core，M+2 使用 RandomForest + enhanced，M+3 使用 RandomForest + enhanced。</p>
 <h2>2. 价差走势与中期预测</h2>
 <img src='bd_m1_m3_monthly_forecast_chart.png' alt='M1-M3月均预测图'>
@@ -131,240 +131,240 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>1</td>
       <td>Dated篮子平均升贴水</td>
       <td>Dated CTD</td>
-      <td>0.397150</td>
+      <td>0.291981</td>
       <td>反映BFOET+WTI Midland篮子整体相对Dated的升贴水</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
       <td>2</td>
-      <td>usgc_uk_cost</td>
-      <td>产品价差</td>
-      <td>0.210751</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>伊朗油相对Dubai贵贱</td>
+      <td>制裁替代油</td>
+      <td>0.202878</td>
+      <td>反映伊朗油相对Dubai的贵贱变化</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
       <td>3</td>
-      <td>Cold Lake相对优势信号</td>
-      <td>非制裁替代油</td>
-      <td>0.106981</td>
-      <td>反映Cold Lake相对其他替代油的竞争力</td>
+      <td>制裁替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.190504</td>
+      <td>反映制裁替代油整体便宜度压力</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
       <td>4</td>
+      <td>俄罗斯替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.096833</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-07</td>
+      <td>5</td>
       <td>Dubai近端曲线</td>
       <td>Dubai结构</td>
-      <td>0.054226</td>
+      <td>0.048056</td>
       <td>Dubai近端结构越强，通常对Dubai相对Brent有支撑</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
-      <td>5</td>
+      <td>6</td>
       <td>Dated篮子最便宜组分差</td>
       <td>Dated CTD</td>
-      <td>0.052970</td>
+      <td>0.046413</td>
       <td>反映BFOET+WTI Midland篮子中最便宜组分对Dated的压力</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
-      <td>6</td>
-      <td>价差5日滞后项</td>
-      <td>价差惯性</td>
-      <td>0.043347</td>
-      <td>反映Dated-Dubai价差一周左右的惯性</td>
-    </tr>
-    <tr>
-      <td>M+1 2026-07</td>
       <td>7</td>
-      <td>dfl1</td>
-      <td>其他</td>
-      <td>0.042166</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>制裁油流向亚洲</td>
+      <td>制裁替代油</td>
+      <td>0.035819</td>
+      <td>反映制裁油流向亚洲的供应压力</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
       <td>8</td>
-      <td>sg_mf05_hsfo35</td>
-      <td>产品价差</td>
-      <td>0.035663</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>核心海湾出口量</td>
+      <td>OPEC供应</td>
+      <td>0.027782</td>
+      <td>反映核心海湾出口量变化对中东供应的影响</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
       <td>9</td>
-      <td>sg_gasoil_hsfo35</td>
-      <td>产品价差</td>
-      <td>0.023430</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.026643</td>
+      <td>反映中东供应缓冲和潜在增产压力</td>
     </tr>
     <tr>
       <td>M+1 2026-07</td>
       <td>10</td>
-      <td>价差1日滞后项</td>
-      <td>价差惯性</td>
-      <td>0.010350</td>
-      <td>反映Dated-Dubai价差短期惯性</td>
-    </tr>
-    <tr>
-      <td>M+2 2026-08</td>
-      <td>1</td>
       <td>Cold Lake相对优势信号</td>
       <td>非制裁替代油</td>
-      <td>0.207645</td>
+      <td>0.013449</td>
       <td>反映Cold Lake相对其他替代油的竞争力</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
+      <td>1</td>
+      <td>Murban/Upper Zakum OSP价差</td>
+      <td>Dubai OSP</td>
+      <td>0.625648</td>
+      <td>反映UAE轻质与中重质官方售价相对强弱</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
       <td>2</td>
-      <td>WAF至UK Suezmax运费</td>
-      <td>运费</td>
-      <td>0.137368</td>
-      <td>反映西非原油流向欧洲的运费成本和套利压力</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.083920</td>
+      <td>反映中东供应缓冲和潜在增产压力</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>3</td>
-      <td>me_asia_vlcc_usd_bbl</td>
-      <td>运费</td>
-      <td>0.133328</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>核心海湾产量</td>
+      <td>OPEC供应</td>
+      <td>0.076401</td>
+      <td>反映核心海湾产量变化对中东供应的影响</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>4</td>
-      <td>usgc_uk_cost</td>
-      <td>产品价差</td>
-      <td>0.126376</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>WAF至UK Suezmax运费</td>
+      <td>运费</td>
+      <td>0.071410</td>
+      <td>反映西非原油流向欧洲的运费成本和套利压力</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>5</td>
-      <td>usgc_uk_afra_usd_bbl</td>
-      <td>产品价差</td>
-      <td>0.122766</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>俄罗斯替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.032499</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的压力</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>6</td>
-      <td>usgc_uk_vlcc_usd_bbl</td>
+      <td>USGC汽油价格</td>
       <td>产品价差</td>
-      <td>0.102830</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>0.019272</td>
+      <td>反映美国海湾汽油市场强弱及产品端支撑</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>7</td>
-      <td>sg_hsfo_35s_usd_bbl</td>
-      <td>产品价差</td>
-      <td>0.083757</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>Dubai M1/M2结构</td>
+      <td>Dubai结构</td>
+      <td>0.015335</td>
+      <td>反映Dubai近月相对次月强弱</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>8</td>
-      <td>sg_mf05_hsfo35</td>
-      <td>产品价差</td>
-      <td>0.037578</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>Dated篮子平均升贴水</td>
+      <td>Dated CTD</td>
+      <td>0.014348</td>
+      <td>反映BFOET+WTI Midland篮子整体相对Dated的升贴水</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>9</td>
-      <td>eu_diesel_hsfo35</td>
-      <td>其他</td>
-      <td>0.011069</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>新加坡航煤/高硫燃料油价差</td>
+      <td>产品价差</td>
+      <td>0.011708</td>
+      <td>反映轻质产品相对重质产品收益强弱</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
       <td>10</td>
-      <td>Dated篮子最便宜组分差</td>
-      <td>Dated CTD</td>
-      <td>0.008300</td>
-      <td>反映BFOET+WTI Midland篮子中最便宜组分对Dated的压力</td>
+      <td>制裁替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.008095</td>
+      <td>反映制裁替代油整体便宜度压力</td>
     </tr>
     <tr>
       <td>M+3 2026-09</td>
       <td>1</td>
-      <td>usgc_uk_vlcc_usd_bbl</td>
-      <td>产品价差</td>
-      <td>0.400943</td>
-      <td>根据业务逻辑衍生的变量</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.486994</td>
+      <td>反映中东供应缓冲和潜在增产压力</td>
     </tr>
     <tr>
       <td>M+3 2026-09</td>
       <td>2</td>
-      <td>Cold Lake相对优势信号</td>
-      <td>非制裁替代油</td>
-      <td>0.150728</td>
-      <td>反映Cold Lake相对其他替代油的竞争力</td>
+      <td>核心海湾产量</td>
+      <td>OPEC供应</td>
+      <td>0.222293</td>
+      <td>反映核心海湾产量变化对中东供应的影响</td>
     </tr>
     <tr>
       <td>M+3 2026-09</td>
       <td>3</td>
+      <td>俄罗斯替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.138198</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的压力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>4</td>
+      <td>制裁替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.071205</td>
+      <td>反映制裁替代油整体便宜度压力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>5</td>
+      <td>伊朗油相对Dubai贵贱</td>
+      <td>制裁替代油</td>
+      <td>0.028674</td>
+      <td>反映伊朗油相对Dubai的贵贱变化</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>6</td>
+      <td>Murban/Upper Zakum OSP价差</td>
+      <td>Dubai OSP</td>
+      <td>0.017993</td>
+      <td>反映UAE轻质与中重质官方售价相对强弱</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>7</td>
+      <td>新加坡航煤/高硫燃料油价差</td>
+      <td>产品价差</td>
+      <td>0.016532</td>
+      <td>反映轻质产品相对重质产品收益强弱</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>8</td>
+      <td>俄罗斯油相对Dubai便宜度</td>
+      <td>制裁替代油</td>
+      <td>0.006817</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的折价吸引力</td>
+    </tr>
+    <tr>
+      <td>M+3 2026-09</td>
+      <td>9</td>
       <td>USGC汽油价格</td>
       <td>产品价差</td>
-      <td>0.134914</td>
+      <td>0.005316</td>
       <td>反映美国海湾汽油市场强弱及产品端支撑</td>
     </tr>
     <tr>
       <td>M+3 2026-09</td>
-      <td>4</td>
-      <td>WAF至UK Suezmax运费</td>
-      <td>运费</td>
-      <td>0.090034</td>
-      <td>反映西非原油流向欧洲的运费成本和套利压力</td>
-    </tr>
-    <tr>
-      <td>M+3 2026-09</td>
-      <td>5</td>
-      <td>eu_gasoline_usd_bbl</td>
-      <td>其他</td>
-      <td>0.035981</td>
-      <td>根据业务逻辑衍生的变量</td>
-    </tr>
-    <tr>
-      <td>M+3 2026-09</td>
-      <td>6</td>
-      <td>中东至地中海VLCC运费</td>
-      <td>运费</td>
-      <td>0.033039</td>
-      <td>反映中东原油西向流动的运费环境</td>
-    </tr>
-    <tr>
-      <td>M+3 2026-09</td>
-      <td>7</td>
-      <td>dubai_curve_m2_m3</td>
-      <td>Dubai结构</td>
-      <td>0.028099</td>
-      <td>根据业务逻辑衍生的变量</td>
-    </tr>
-    <tr>
-      <td>M+3 2026-09</td>
-      <td>8</td>
-      <td>me_asia_vlcc_usd_bbl</td>
-      <td>运费</td>
-      <td>0.022529</td>
-      <td>根据业务逻辑衍生的变量</td>
-    </tr>
-    <tr>
-      <td>M+3 2026-09</td>
-      <td>9</td>
-      <td>usgc_diesel_usd_bbl</td>
-      <td>产品价差</td>
-      <td>0.022153</td>
-      <td>根据业务逻辑衍生的变量</td>
-    </tr>
-    <tr>
-      <td>M+3 2026-09</td>
       <td>10</td>
-      <td>新加坡航煤/高硫燃料油价差</td>
-      <td>产品价差</td>
-      <td>0.020784</td>
-      <td>反映轻质产品相对重质产品收益强弱</td>
+      <td>Brent-Dubai相对曲线</td>
+      <td>Brent/Dubai结构</td>
+      <td>0.003088</td>
+      <td>反映Brent曲线相对Dubai曲线的强弱</td>
     </tr>
   </tbody>
 </table>
