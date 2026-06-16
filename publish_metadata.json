@@ -1,5 +1,5 @@
 {
-  "package_generated_at": "2026-06-15 18:00:20",
+  "package_generated_at": "2026-06-16 10:02:06",
   "source_final_dir": "D:\\BD问题研究\\BD_SHORT_TERM_FINAL_V1_5_EX_STRESS_M1_M3_20260610",
   "package_dir": "D:\\BD问题研究\\github_pages_publish\\site_package",
   "site_url": "https://zyb0716-svg.github.io/bd-daily-report/",
@@ -9,7 +9,7 @@
     {
       "target_name": "m1_avg",
       "forecast_month": "2026-07",
-      "forecast_month_avg_bd": "1.582511587944342",
+      "forecast_month_avg_bd": "1.5825115879443423",
       "direction": "narrow",
       "report_direction_accuracy": "0.6230529595015576"
     },
