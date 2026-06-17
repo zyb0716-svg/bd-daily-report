@@ -12,7 +12,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
 </style></head><body>
 <h1>Dated-Dubai价差中期预测模型报告</h1>
 <h2>1. 核心结论</h2>
-<div class='grid'><div class='kpi'>数据日期<b>2026-06-15</b></div><div class='kpi'>Dated Brent<b>84.445</b></div><div class='kpi'>Dubai<b>78.900</b></div><div class='kpi'>Dated-Dubai价差<b>5.545</b></div></div>
+<div class='grid'><div class='kpi'>数据日期<b>2026-06-16</b></div><div class='kpi'>Dated Brent<b>80.895</b></div><div class='kpi'>Dubai<b>73.190</b></div><div class='kpi'>Dated-Dubai价差<b>7.705</b></div></div>
 <table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
@@ -31,8 +31,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-07</td>
       <td>M+1</td>
-      <td>-9.6793</td>
-      <td>-15.2243</td>
+      <td>-9.6408</td>
+      <td>-17.3458</td>
       <td>下降</td>
       <td>RandomForest</td>
       <td>core</td>
@@ -42,8 +42,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-08</td>
       <td>M+2</td>
-      <td>-7.7320</td>
-      <td>-13.2770</td>
+      <td>-19.2892</td>
+      <td>-26.9942</td>
       <td>下降</td>
       <td>RandomForest</td>
       <td>enhanced</td>
@@ -54,7 +54,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>2026-09</td>
       <td>M+3</td>
       <td>-0.2689</td>
-      <td>-5.8139</td>
+      <td>-7.9739</td>
       <td>下降</td>
       <td>RandomForest</td>
       <td>enhanced</td>
@@ -64,7 +64,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
   </tbody>
 </table>
 <p>方向准确率为历史滚动回测结果。</p>
-<p>最新Dated-Dubai价差为 5.545 USD/bbl；未来预测方向为：M+1 2026-07 下降、M+2 2026-08 下降、M+3 2026-09 下降。</p>
+<p>最新Dated-Dubai价差为 7.705 USD/bbl；未来预测方向为：M+1 2026-07 下降、M+2 2026-08 下降、M+3 2026-09 下降。</p>
 <p>当前三个预测月份中，M+1 使用 RandomForest + core，M+2 使用 RandomForest + enhanced，M+3 使用 RandomForest + enhanced。</p>
 <h2>2. 价差走势与中期预测</h2>
 <img src='bd_m1_m3_monthly_forecast_chart.png' alt='M1-M3月均预测图'>
@@ -260,7 +260,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>Dubai M1/M2结构</td>
       <td>Dubai结构</td>
       <td>0.015335</td>
-      <td>反映Dubai近月相对次月强弱</td>
+      <td>反映Dubai近月与次月结构强弱</td>
     </tr>
     <tr>
       <td>M+2 2026-08</td>
@@ -348,7 +348,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>俄罗斯油相对Dubai便宜度</td>
       <td>制裁替代油</td>
       <td>0.006817</td>
-      <td>反映俄罗斯替代油对Dubai-linked油的折价吸引力</td>
+      <td>俄罗斯油越便宜，对Dubai-linked油有替代压力</td>
     </tr>
     <tr>
       <td>M+3 2026-09</td>
