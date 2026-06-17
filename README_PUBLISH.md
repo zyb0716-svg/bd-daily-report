@@ -1,28 +1,22 @@
-# BD GitHub Pages 本地发布包
+# BD GitHub Pages publish package
+Generated at: 2026-06-17 08:57:22
 
-生成时间：2026-06-16 22:17:56
+Files:
+- index.html: formal report entry
+- bd_m1_m3_monthly_forecast_chart.png: report chart
+- short_term_final_forecast_summary.csv: forecast summary
+- final_forecast_lock.csv: locked forecast and metrics
+- short_term_final_backtest_summary.csv: backtest summary
+- publish_metadata.json: package metadata
 
-本目录只包含可以发布到 GitHub Pages 的静态文件：
-
-- `index.html`：正式报告入口页
-- `bd_m1_m3_monthly_forecast_chart.png`：报告图表
-- `short_term_final_forecast_summary.csv`：预测摘要
-- `final_forecast_lock.csv`：锁定预测与口径信息
-- `short_term_final_backtest_summary.csv`：正式回测摘要
-- `publish_metadata.json`：本次打包元数据
-
-手动发布到 GitHub Pages 的推荐命令：
-
+Manual publish:
 ```powershell
-cd /d "D:\BD问题研究\github_pages_publish\bd-daily-report"
-Copy-Item -Force "D:\BD问题研究\github_pages_publish\site_package\*" "D:\BD问题研究\github_pages_publish\bd-daily-report\"
+Set-Location -LiteralPath "D:\BD问题研究\github_pages_publish\bd-daily-report"
+Copy-Item -Path "D:\BD问题研究\github_pages_publish\site_package\*" -Destination "D:\BD问题研究\github_pages_publish\bd-daily-report" -Force
 git add .
 git commit -m "Update BD report"
 git push origin main
 ```
 
-GitHub Pages 地址：
-
+GitHub Pages URL:
 https://zyb0716-svg.github.io/bd-daily-report/
-
-注意：自动模型任务只生成本地包，不执行 `git push`。
