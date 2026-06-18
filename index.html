@@ -12,7 +12,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
 </style></head><body>
 <h1>Dated-Dubai价差中期预测模型报告</h1>
 <h2>1. 核心结论</h2>
-<div class='grid'><div class='kpi'>数据日期<b>2026-06-16</b></div><div class='kpi'>Dated Brent<b>80.895</b></div><div class='kpi'>Dubai<b>73.190</b></div><div class='kpi'>Dated-Dubai价差<b>7.705</b></div></div>
+<div class='grid'><div class='kpi'>数据日期<b>2026-06-17</b></div><div class='kpi'>Dated Brent<b>80.345</b></div><div class='kpi'>Dubai<b>73.910</b></div><div class='kpi'>Dated-Dubai价差<b>6.435</b></div></div>
 <table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
@@ -31,8 +31,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-07</td>
       <td>M+1</td>
-      <td>-9.6408</td>
-      <td>-17.3458</td>
+      <td>0.5823</td>
+      <td>-5.8527</td>
       <td>下降</td>
       <td>RandomForest</td>
       <td>core</td>
@@ -42,8 +42,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-08</td>
       <td>M+2</td>
-      <td>-19.2892</td>
-      <td>-26.9942</td>
+      <td>-7.7320</td>
+      <td>-14.1670</td>
       <td>下降</td>
       <td>RandomForest</td>
       <td>enhanced</td>
@@ -54,7 +54,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>2026-09</td>
       <td>M+3</td>
       <td>-0.2689</td>
-      <td>-7.9739</td>
+      <td>-6.7039</td>
       <td>下降</td>
       <td>RandomForest</td>
       <td>enhanced</td>
@@ -64,10 +64,10 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
   </tbody>
 </table>
 <p>方向准确率为历史滚动回测结果。</p>
-<p>最新Dated-Dubai价差为 7.705 USD/bbl；未来预测方向为：M+1 2026-07 下降、M+2 2026-08 下降、M+3 2026-09 下降。</p>
+<p>最新Dated-Dubai价差为 6.435 USD/bbl；未来预测方向为：M+1 2026-07 下降、M+2 2026-08 下降、M+3 2026-09 下降。</p>
 <p>当前三个预测月份中，M+1 使用 RandomForest + core，M+2 使用 RandomForest + enhanced，M+3 使用 RandomForest + enhanced。</p>
 <h2>2. 价差走势与中期预测</h2>
-<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260617141153' alt='M1-M3月均预测图'>
+<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260618101911' alt='M1-M3月均预测图'>
 <p class='note'>实线为最近历史日度Dated-Dubai价差；水平虚线分别表示M+1/M+2/M+3完整自然月平均Dated-Dubai价差预测。价差上升表示Dated Brent相对Dubai走强；价差下降表示Dubai相对Dated Brent走强。</p>
 <h2>3. 回测表现摘要</h2>
 <table class="dataframe data-table">
