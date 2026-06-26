@@ -75,7 +75,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
 <p>最新Dated-Dubai价差为 8.850 USD/bbl；未来预测方向为：M+1 2026-07 下降、M+2 2026-08 下降、M+3 2026-09 下降。</p>
 <p>当前三个预测月份中，M+1 使用 ExtraTrees + core，M+2 使用 ExtraTrees + enhanced，M+3 使用 RandomForest + enhanced。</p>
 <h2>2. 价差走势与中期预测</h2>
-<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260626103005' alt='M1-M3月均预测图'>
+<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260626140155' alt='M1-M3月均预测图'>
 <p class='note'>实线为最近历史日度Dated-Dubai价差；水平虚线分别表示M+1/M+2/M+3完整自然月平均Dated-Dubai价差预测。价差上升表示Dated Brent相对Dubai走强；价差下降表示Dubai相对Dated Brent走强。</p>
 <h2>3. 回测表现摘要</h2>
 <table class="dataframe data-table">
@@ -213,6 +213,86 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>中东供应</td>
       <td>0.044731</td>
       <td>反映核心海湾原油产量变化</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>1</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.174034</td>
+      <td>反映OPEC可释放供应弹性</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>2</td>
+      <td>Murban/Upper Zakum OSP价差</td>
+      <td>Dubai OSP</td>
+      <td>0.140235</td>
+      <td>反映UAE不同OSP等级之间的相对强弱</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>3</td>
+      <td>核心海湾产量</td>
+      <td>中东供应</td>
+      <td>0.124854</td>
+      <td>反映核心海湾原油产量变化</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>4</td>
+      <td>俄罗斯替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.103661</td>
+      <td>反映俄罗斯替代油对Dubai-linked油的便宜度压力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>5</td>
+      <td>WAF至UK Suezmax运费</td>
+      <td>运费</td>
+      <td>0.103223</td>
+      <td>反映西非至UK航线运费压力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>6</td>
+      <td>俄罗斯油相对Dubai便宜度</td>
+      <td>制裁替代油</td>
+      <td>0.082622</td>
+      <td>俄罗斯油越便宜，对Dubai-linked油有替代压力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>7</td>
+      <td>USGC至UK VLCC运费</td>
+      <td>运费/产品</td>
+      <td>0.041460</td>
+      <td>反映USGC至UK航线运费压力</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>8</td>
+      <td>me_uk_vlcc_usd_bbl</td>
+      <td>运费</td>
+      <td>0.029011</td>
+      <td>根据业务逻辑衍生的变量</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>9</td>
+      <td>us_exports_asia_kbd</td>
+      <td>其他</td>
+      <td>0.028648</td>
+      <td>根据业务逻辑衍生的变量</td>
+    </tr>
+    <tr>
+      <td>M+2 2026-08</td>
+      <td>10</td>
+      <td>usgc_hsfo_35s_usd_bbl</td>
+      <td>运费/产品</td>
+      <td>0.027858</td>
+      <td>根据业务逻辑衍生的变量</td>
     </tr>
     <tr>
       <td>M+3 2026-09</td>
