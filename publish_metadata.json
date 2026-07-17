@@ -1,25 +1,25 @@
 {
-  "package_generated_at": "2026-07-16 10:35:13",
-  "chart_cache_buster": "20260716103513",
+  "package_generated_at": "2026-07-17 10:30:05",
+  "chart_cache_buster": "20260717103005",
   "source_final_dir": "D:\\BD问题研究\\BD_SHORT_TERM_FINAL_V1_8_EQUAL_M1_M3_ALL_EXTRATREES_20260705",
   "package_dir": "D:\\BD问题研究\\github_pages_publish\\site_package",
   "site_url": "https://zyb0716-svg.github.io/bd-daily-report/",
   "google_analytics_measurement_id": "G-11B1CLMF7R",
-  "latest_data_date": "2026-07-15",
-  "latest_bd": "2.9299999999999926",
+  "latest_data_date": "2026-07-16",
+  "latest_bd": "7.084999999999994",
   "forecast_rows": [
     {
       "target_name": "m1_avg",
       "forecast_month": "2026-08",
       "forecast_month_avg_bd": "4.554041277984993",
-      "direction": "widen",
-      "display_direction": "上升",
+      "direction": "narrow",
+      "display_direction": "下降",
       "report_direction_accuracy": "0.5321637426900585"
     },
     {
       "target_name": "m2_avg",
       "forecast_month": "2026-09",
-      "forecast_month_avg_bd": "1.89125726244761",
+      "forecast_month_avg_bd": "1.91166953707801",
       "direction": "narrow",
       "display_direction": "下降",
       "report_direction_accuracy": "0.6308243727598566"
@@ -27,7 +27,7 @@
     {
       "target_name": "m3_avg",
       "forecast_month": "2026-10",
-      "forecast_month_avg_bd": "1.6561005492940837",
+      "forecast_month_avg_bd": "1.5162876657839603",
       "direction": "narrow",
       "display_direction": "下降",
       "report_direction_accuracy": "0.72265625"
