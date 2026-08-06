@@ -1,7 +1,7 @@
 {
-  "package_generated_at": "2026-08-06 13:58:33",
-  "chart_cache_buster": "20260806135833",
-  "source_final_dir": "D:\\BD问题研究\\BD_SHORT_TERM_FINAL_V1_8_EQUAL_M1_M3_ALL_EXTRATREES_20260705",
+  "package_generated_at": "2026-08-06 14:01:39",
+  "chart_cache_buster": "20260806140139",
+  "source_final_dir": "D:\\BD问题研究\\BD_SHORT_TERM_FINAL_V1_5_EX_STRESS_M1_M3_20260610",
   "package_dir": "D:\\BD问题研究\\github_pages_publish\\site_package",
   "site_url": "https://zyb0716-svg.github.io/bd-daily-report/",
   "google_analytics_measurement_id": "G-11B1CLMF7R",
@@ -11,23 +11,23 @@
     {
       "target_name": "m1_avg",
       "forecast_month": "2026-09",
-      "forecast_month_avg_bd": "4.496657976186873",
+      "forecast_month_avg_bd": "4.1929513610474505",
       "direction": "narrow",
       "display_direction": "下降",
-      "report_direction_accuracy": "0.510989010989011"
+      "report_direction_accuracy": "0.5321637426900585"
     },
     {
       "target_name": "m2_avg",
       "forecast_month": "2026-10",
-      "forecast_month_avg_bd": "4.753674753647349",
+      "forecast_month_avg_bd": "5.235831357940254",
       "direction": "narrow",
       "display_direction": "下降",
-      "report_direction_accuracy": "0.6166666666666667"
+      "report_direction_accuracy": "0.6308243727598566"
     },
     {
       "target_name": "m3_avg",
       "forecast_month": "2026-11",
-      "forecast_month_avg_bd": "1.375428212414119",
+      "forecast_month_avg_bd": "1.2115831472385896",
       "direction": "narrow",
       "display_direction": "下降",
       "report_direction_accuracy": "0.72265625"
