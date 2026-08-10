@@ -1,12 +1,12 @@
 {
-  "package_generated_at": "2026-08-07 11:09:02",
-  "chart_cache_buster": "20260807110902",
+  "package_generated_at": "2026-08-10 09:21:33",
+  "chart_cache_buster": "20260810092133",
   "source_final_dir": "D:\\BD问题研究\\BD_SHORT_TERM_FINAL_V1_8_EQUAL_M1_M3_ALL_EXTRATREES_20260705",
   "package_dir": "D:\\BD问题研究\\github_pages_publish\\site_package",
   "site_url": "https://zyb0716-svg.github.io/bd-daily-report/",
   "google_analytics_measurement_id": "G-11B1CLMF7R",
-  "latest_data_date": "2026-08-06",
-  "latest_bd": "10.155",
+  "latest_data_date": "2026-08-07",
+  "latest_bd": "8.435000000000002",
   "forecast_rows": [
     {
       "target_name": "m1_avg",
@@ -19,7 +19,7 @@
     {
       "target_name": "m2_avg",
       "forecast_month": "2026-10",
-      "forecast_month_avg_bd": "5.371621564314735",
+      "forecast_month_avg_bd": "5.391702844366808",
       "direction": "narrow",
       "display_direction": "下降",
       "report_direction_accuracy": "0.6133333333333333"
