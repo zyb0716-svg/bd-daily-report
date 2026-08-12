@@ -20,7 +20,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
 </head><body>
 <h1>Dated-Dubai价差中期预测模型报告</h1>
 <h2>1. 核心结论</h2>
-<div class='grid'><div class='kpi'>数据日期<b>2026-08-07</b></div><div class='kpi'>Dated Brent<b>89.185</b></div><div class='kpi'>Dubai<b>80.750</b></div><div class='kpi'>Dated-Dubai价差<b>8.435</b></div></div>
+<div class='grid'><div class='kpi'>数据日期<b>2026-08-11</b></div><div class='kpi'>Dated Brent<b>93.330</b></div><div class='kpi'>Dubai<b>88.990</b></div><div class='kpi'>Dated-Dubai价差<b>4.340</b></div></div>
 <table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
@@ -39,8 +39,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-09</td>
       <td>M+1</td>
-      <td>4.2206</td>
-      <td>-4.2144</td>
+      <td>4.2736</td>
+      <td>-0.0664</td>
       <td>下降</td>
       <td>ExtraTrees</td>
       <td>core</td>
@@ -50,9 +50,9 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-10</td>
       <td>M+2</td>
-      <td>5.3917</td>
-      <td>-3.0433</td>
-      <td>下降</td>
+      <td>5.6960</td>
+      <td>1.3560</td>
+      <td>上升</td>
       <td>ExtraTrees</td>
       <td>enhanced</td>
       <td>61.33%</td>
@@ -61,8 +61,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-11</td>
       <td>M+3</td>
-      <td>1.2260</td>
-      <td>-7.2090</td>
+      <td>1.3408</td>
+      <td>-2.9992</td>
       <td>下降</td>
       <td>ExtraTrees</td>
       <td>enhanced</td>
@@ -72,10 +72,10 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
   </tbody>
 </table>
 <p>方向准确率为历史滚动回测结果。</p>
-<p>最新Dated-Dubai价差为 8.435 USD/bbl；未来预测方向为：M+1 2026-09 下降、M+2 2026-10 下降、M+3 2026-11 下降。</p>
+<p>最新Dated-Dubai价差为 4.340 USD/bbl；未来预测方向为：M+1 2026-09 下降、M+2 2026-10 上升、M+3 2026-11 下降。</p>
 <p>当前三个预测月份中，M+1 使用 ExtraTrees + core，M+2 使用 ExtraTrees + enhanced，M+3 使用 ExtraTrees + enhanced。</p>
 <h2>2. 价差走势与中期预测</h2>
-<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260811110257' alt='M1-M3月均预测图'>
+<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260812103508' alt='M1-M3月均预测图'>
 <p class='note'>实线为最近历史日度Dated-Dubai价差；水平虚线分别表示M+1/M+2/M+3完整自然月平均Dated-Dubai价差预测。价差上升表示Dated Brent相对Dubai走强；价差下降表示Dubai相对Dated Brent走强。</p>
 <h2>3. 回测表现摘要</h2>
 <table class="dataframe data-table">
@@ -137,82 +137,82 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>M+1 2026-09</td>
       <td>1</td>
-      <td>OPEC剩余产能</td>
-      <td>OPEC供应</td>
-      <td>0.316040</td>
-      <td>反映OPEC可释放供应弹性</td>
-    </tr>
-    <tr>
-      <td>M+1 2026-09</td>
-      <td>2</td>
       <td>沙特中质/轻质OSP价差</td>
       <td>OSP结构</td>
-      <td>0.213971</td>
+      <td>0.291799</td>
       <td>反映沙特中质油和轻质油OSP相对强弱</td>
     </tr>
     <tr>
       <td>M+1 2026-09</td>
-      <td>3</td>
-      <td>核心海湾出口量</td>
-      <td>中东供应</td>
-      <td>0.179633</td>
-      <td>反映核心海湾原油出口强弱</td>
+      <td>2</td>
+      <td>OPEC剩余产能</td>
+      <td>OPEC供应</td>
+      <td>0.250816</td>
+      <td>反映OPEC可释放供应弹性</td>
     </tr>
     <tr>
       <td>M+1 2026-09</td>
-      <td>4</td>
+      <td>3</td>
       <td>核心海湾产量</td>
       <td>中东供应</td>
-      <td>0.081722</td>
+      <td>0.147342</td>
       <td>反映核心海湾原油产量变化</td>
     </tr>
     <tr>
       <td>M+1 2026-09</td>
-      <td>5</td>
-      <td>Dubai近端曲线</td>
-      <td>Dubai结构</td>
-      <td>0.041960</td>
-      <td>Dubai近端结构越强，通常对Dubai相对Brent有支撑</td>
+      <td>4</td>
+      <td>核心海湾出口量</td>
+      <td>中东供应</td>
+      <td>0.107626</td>
+      <td>反映核心海湾原油出口强弱</td>
     </tr>
     <tr>
       <td>M+1 2026-09</td>
-      <td>6</td>
+      <td>5</td>
       <td>Dubai CTD篮子平均升贴水</td>
       <td>Dubai CTD</td>
-      <td>0.041821</td>
+      <td>0.049261</td>
       <td>反映Oman、Upper Zakum、Al Shaheen、Murban相对Dubai的平均升贴水</td>
     </tr>
     <tr>
       <td>M+1 2026-09</td>
+      <td>6</td>
+      <td>Dubai近端曲线</td>
+      <td>Dubai结构</td>
+      <td>0.038049</td>
+      <td>Dubai近端结构越强，通常对Dubai相对Brent有支撑</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-09</td>
       <td>7</td>
-      <td>Dubai CTD最便宜组分差</td>
-      <td>Dubai CTD</td>
-      <td>0.030004</td>
-      <td>反映Dubai交割篮子中最便宜组分相对Dubai的压力</td>
-    </tr>
-    <tr>
-      <td>M+1 2026-09</td>
-      <td>8</td>
-      <td>伊朗替代油便宜度压力</td>
-      <td>制裁替代油</td>
-      <td>0.023954</td>
-      <td>反映伊朗替代油对Dubai-linked油的便宜度压力</td>
-    </tr>
-    <tr>
-      <td>M+1 2026-09</td>
-      <td>9</td>
       <td>俄罗斯替代油便宜度压力</td>
       <td>制裁替代油</td>
-      <td>0.022351</td>
+      <td>0.029926</td>
       <td>反映俄罗斯替代油对Dubai-linked油的便宜度压力</td>
     </tr>
     <tr>
       <td>M+1 2026-09</td>
-      <td>10</td>
-      <td>Dubai CTD篮子分化</td>
+      <td>8</td>
+      <td>Dubai CTD最便宜组分差</td>
       <td>Dubai CTD</td>
-      <td>0.016465</td>
-      <td>反映Dubai交割篮子内部组分升贴水分化程度</td>
+      <td>0.027981</td>
+      <td>反映Dubai交割篮子中最便宜组分相对Dubai的压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-09</td>
+      <td>9</td>
+      <td>USGC至UK到岸成本</td>
+      <td>运费/产品</td>
+      <td>0.016487</td>
+      <td>反映USGC原油流向UK的到岸成本压力</td>
+    </tr>
+    <tr>
+      <td>M+1 2026-09</td>
+      <td>10</td>
+      <td>伊朗替代油便宜度压力</td>
+      <td>制裁替代油</td>
+      <td>0.012763</td>
+      <td>反映伊朗替代油对Dubai-linked油的便宜度压力</td>
     </tr>
     <tr>
       <td>M+2 2026-10</td>
