@@ -20,7 +20,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
 </head><body>
 <h1>Dated-Dubai价差中期预测模型报告</h1>
 <h2>1. 核心结论</h2>
-<div class='grid'><div class='kpi'>数据日期<b>2026-08-14</b></div><div class='kpi'>Dated Brent<b>92.055</b></div><div class='kpi'>Dubai<b>88.500</b></div><div class='kpi'>Dated-Dubai价差<b>3.555</b></div></div>
+<div class='grid'><div class='kpi'>数据日期<b>2026-08-18</b></div><div class='kpi'>Dated Brent<b>92.720</b></div><div class='kpi'>Dubai<b>90.290</b></div><div class='kpi'>Dated-Dubai价差<b>2.430</b></div></div>
 <table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
@@ -39,8 +39,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-09</td>
       <td>M+1</td>
-      <td>4.1524</td>
-      <td>0.5974</td>
+      <td>4.1873</td>
+      <td>1.7573</td>
       <td>上升</td>
       <td>ExtraTrees</td>
       <td>core</td>
@@ -50,8 +50,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-10</td>
       <td>M+2</td>
-      <td>5.6010</td>
-      <td>2.0460</td>
+      <td>5.6883</td>
+      <td>3.2583</td>
       <td>上升</td>
       <td>ExtraTrees</td>
       <td>enhanced</td>
@@ -61,8 +61,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
     <tr>
       <td>2026-11</td>
       <td>M+3</td>
-      <td>1.3720</td>
-      <td>-2.1830</td>
+      <td>1.3714</td>
+      <td>-1.0586</td>
       <td>下降</td>
       <td>ExtraTrees</td>
       <td>enhanced</td>
@@ -72,10 +72,10 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
   </tbody>
 </table>
 <p>方向准确率为历史滚动回测结果。</p>
-<p>最新Dated-Dubai价差为 3.555 USD/bbl；未来预测方向为：M+1 2026-09 上升、M+2 2026-10 上升、M+3 2026-11 下降。</p>
+<p>最新Dated-Dubai价差为 2.430 USD/bbl；未来预测方向为：M+1 2026-09 上升、M+2 2026-10 上升、M+3 2026-11 下降。</p>
 <p>当前三个预测月份中，M+1 使用 ExtraTrees + core，M+2 使用 ExtraTrees + enhanced，M+3 使用 ExtraTrees + enhanced。</p>
 <h2>2. 价差走势与中期预测</h2>
-<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260817103005' alt='M1-M3月均预测图'>
+<img src='bd_m1_m3_monthly_forecast_chart.png?v=20260819103005' alt='M1-M3月均预测图'>
 <p class='note'>实线为最近历史日度Dated-Dubai价差；水平虚线分别表示M+1/M+2/M+3完整自然月平均Dated-Dubai价差预测。价差上升表示Dated Brent相对Dubai走强；价差下降表示Dubai相对Dated Brent走强。</p>
 <h2>3. 回测表现摘要</h2>
 <table class="dataframe data-table">
@@ -96,8 +96,8 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>M+1</td>
       <td>ExtraTrees</td>
       <td>core</td>
-      <td>1.9874</td>
-      <td>2.6207</td>
+      <td>1.9873</td>
+      <td>2.6205</td>
       <td>51.10%</td>
     </tr>
     <tr>
@@ -139,7 +139,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>1</td>
       <td>沙特中质/轻质OSP价差</td>
       <td>OSP结构</td>
-      <td>0.291799</td>
+      <td>0.277738</td>
       <td>反映沙特中质油和轻质油OSP相对强弱</td>
     </tr>
     <tr>
@@ -155,7 +155,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>3</td>
       <td>核心海湾产量</td>
       <td>中东供应</td>
-      <td>0.147342</td>
+      <td>0.161404</td>
       <td>反映核心海湾原油产量变化</td>
     </tr>
     <tr>
@@ -259,7 +259,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>6</td>
       <td>OPEC剩余产能</td>
       <td>OPEC供应</td>
-      <td>0.072236</td>
+      <td>0.072611</td>
       <td>反映OPEC可释放供应弹性</td>
     </tr>
     <tr>
@@ -267,7 +267,7 @@ img{max-width:100%;border:1px solid #ddd}.note{color:#555}
       <td>7</td>
       <td>核心海湾产量</td>
       <td>中东供应</td>
-      <td>0.066302</td>
+      <td>0.065927</td>
       <td>反映核心海湾原油产量变化</td>
     </tr>
     <tr>
